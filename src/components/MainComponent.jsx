@@ -1,11 +1,8 @@
-import Button from './Button'
-function MainComponent() {
+import LanguageSection from './LanguageSection'
+function MainComponent(title, description) {
     return (
         <main className="container">
-            <div>
-                <Button />
-            </div>
-            <div className="border">ciao</div>
+            <LanguageSection />
         </main>
     )
 }
