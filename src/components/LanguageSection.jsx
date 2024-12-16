@@ -1,5 +1,6 @@
 import { useState } from "react";
 import languages from '../data/languages'
+import Card from './Card'
 
 function LanguageSection() {
     const languageList = [...languages];
@@ -17,10 +18,7 @@ function LanguageSection() {
                     )
                 })}
             </ul>
-            <div className="border p-2">
-                <h2>{activeLanguage.title}</h2>
-                <p>{activeLanguage.description}</p>
-            </div>
+            <Card activeLanguage={activeLanguage} />
         </section>
     )
 }
