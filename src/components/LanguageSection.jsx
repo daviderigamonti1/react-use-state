@@ -9,14 +9,15 @@ function LanguageSection() {
         <section>
             <ul className="d-flex">
                 {languageList.map((language) => {
+                    const isActive = activeLanguage.id === language.id;
                     return (
                         <li key={language.id} className="pe-2" onClick={() => setActiveLanguage(language)}>
-                            <button className="btn btn-primary">{language.title}</button>
+                            <button className={`btn ${isActive ? 'btn-warning' : 'btn-primary'}`}>{language.title}</button>
                         </li>
                     )
                 })}
             </ul>
-            <div className="border">
+            <div className="border p-2">
                 <h2>{activeLanguage.title}</h2>
                 <p>{activeLanguage.description}</p>
             </div>
