@@ -12,6 +12,3 @@ function App() {
 }
 
 export default App;
-
-/*- Se nessun linguaggio è selezionato, la card del dettaglio mostra “nessun linguaggio selezionato”
-- Scomporre i buttons in componenti a parte che mantengono tutte le funzionaliltà*/

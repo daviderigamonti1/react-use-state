@@ -1,5 +1,6 @@
 import { useState } from "react";
 import languages from '../data/languages'
+import Button from './Button'
 import Card from './Card'
 
 function LanguageSection() {
@@ -12,9 +13,11 @@ function LanguageSection() {
                 {languageList.map((language) => {
                     const isActive = activeLanguage.id === language.id;
                     return (
-                        <li key={language.id} className="pe-2" onClick={() => setActiveLanguage(language)}>
-                            <button className={`btn ${isActive ? 'btn-warning' : 'btn-primary'}`}>{language.title}</button>
-                        </li>
+                        <Button
+                            key={language.id}
+                            language={language}
+                            isActive={isActive}
+                            onClick={() => setActiveLanguage(language)} />
                     )
                 })}
             </ul>
