@@ -1,8 +1,11 @@
+import Button from './Button'
 function MainComponent() {
     return (
-        <main>
-            <ul className="container">button</ul>
-            <div className="container border">ciao</div>
+        <main className="container">
+            <div>
+                <Button />
+            </div>
+            <div className="border">ciao</div>
         </main>
     )
 }
